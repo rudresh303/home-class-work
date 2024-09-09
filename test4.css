@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+
+/* this repesents the universal selector in which it resets margins, padding, and sets the box-sizing to border-box for all elements. */
 * {
   margin: 0;
   padding: 0;
@@ -8,25 +10,31 @@
 }
 
 html {
+  /* used scroll behaviour as smooth for this ui */
   scroll-behavior: smooth;
 }
 
 body {
+  /* The body has a light gray background color */
   background: #f2f2f2;
 }
 
 header {
+
+  /* The header is fixed at the top of the page, styled with a dark background (#333), and flexbox is used to center its contents.*/
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
   width: 100%;
+  /* flex is used to align elements horizontolly */
   display: flex;
   justify-content: center;
   background: #333;
 }
 
 .navbar {
+  /* The navbar is styled with flexbox to align its items horizontally and textalign to align to center.*/
   display: flex;
   padding: 0 10px;
   max-width: 1200px;
@@ -35,30 +43,42 @@ header {
   justify-content: space-between;
 }
 
+/* A hidden checkbox (#menu-toggler) and hamburger button (#hamburger-btn) are used to toggle a mobile menu. */
 .navbar input#menu-toggler {
   display: none;
 }
 
 .navbar #hamburger-btn {
+  /* This property changes the cursor to a pointer (usually a hand icon) when hovering over the element, indicating that it's clickable. */
   cursor: pointer;
+  /* This property hides the element completely, */
   display: none;
 }
 
 .navbar .all-links {
+  /* display: flex;: This sets the element to use Flexbox, which is a layout model that allows for the arrangement of child elements in rows or columns, 
+  providing powerful alignment and spacing capabilities. */
   display: flex;
   align-items: center;
 }
 
+/* position: relative;: This property positions the element relative to its normal position in the document flow. 
+It doesn't change the element's position initially, but it allows positioning adjustments with properties like top, left, right, and bottom. 
+It also sets a reference point for absolutely positioned child elements. */
 .navbar .all-links li {
   position: relative;
   list-style: none;
 }
 
+
+ /* display: flex;: This sets the element to use Flexbox, which is a layout model that allows for the arrangement of child elements in rows or columns,
+  providing powerful alignment and spacing capabilities. */
 .navbar .logo a {
   display: flex;
   align-items: center;
   margin-left: 0;
 }
+
 
 header a, footer a {
   margin-left: 40px;
@@ -66,6 +86,8 @@ header a, footer a {
   color: #fff;
   height: 100%;
   padding: 20px 0;
+  /* display: inline-block;: Makes the links behave like block elements in terms of accepting height and padding,
+   while still lining up horizontally like inline elements. This allows for better control over their dimensions and layout. */
   display: inline-block;
 }
 
@@ -76,15 +98,26 @@ header a:hover, footer a:hover {
 .homepage {
   height: 100vh;
   width: 100%;
+  /* This property sets the positioning context for the element. It positions the element relative to its normal position in the document flow. */
   position: relative;
   background: url("https://koa.com/blog/images/family-camping-at-sunset.jpg?preset=heroimagecropped");
   background-position: center 65%;
+  /* a full page back ground image is styled using  */
   background-size: cover;
+  /* background-attachment: fixed;: Fixes the background image in place so that it doesn't scroll with the content.
+   This creates a parallax scrolling effect where the background stays still while the content moves over it. */
   background-attachment: fixed;
 }
 
+
+/* content: "";: Generates an empty pseudo-element (::before) within the .homepage element.
+ This is required to make the pseudo-element visible and usable for styling purposes. */
 .homepage::before {
   content: "";
+  /*Positions the pseudo-element absolutely within the .homepage section,
+   meaning it will be placed relative to the nearest positioned ancestor, which is .homepage due to its position: relative;.
+
+ */
   position: absolute;
   left: 0;
   top: 0;
@@ -96,6 +129,8 @@ header a:hover, footer a:hover {
 .homepage .content {
   display: flex;
   height: 85%;
+  /* z-index: 3;: Sets the stacking order of the element, placing it above elements with lower z-index values.
+   This ensures that the content appears above background elements and overlays. */
   z-index: 3;
   align-items: center;
   justify-content: center;
@@ -208,7 +243,11 @@ section .cards .card {
 .portfolio .card img {
   width: 100%;
   padding-bottom: 10px;
+  /* aspect-ratio: 16 / 9;: Maintains a 16:9 aspect ratio for the image,
+   a standard ratio commonly used in media (like videos and photos). This ensures the image retains a consistent, proportional shape regardless of its actual size. */
   aspect-ratio: 16 / 9;
+  /* object-fit: cover;: Ensures the image covers the entire area of its container while maintaining its aspect ratio.
+   If the image doesn’t perfectly match the container dimensions, it will be cropped rather than stretched or squished, making sure the image always looks natural and fills the space nicely. */
   object-fit: cover;
   border-radius: 7px;
 }
@@ -251,6 +290,7 @@ section .cards .card {
   padding: 10px;
   width: 100%;
   font-size: 16px;
+  /* Removes the default outline that browsers add around textarea elements when they are focused. */
   outline: none;
   border: 1px solid #bfbfbf;
 }
@@ -261,6 +301,8 @@ section .cards .card {
   font-size: 16px;
   height: 150px;
   outline: none;
+  /*  Allows users to resize the textarea vertically only, while keeping its width fixed.
+   This can help users adjust the height to fit more content if needed, without altering the layout. */
   resize: vertical;
   border: 1px solid #bfbfbf;
 }
@@ -304,7 +346,9 @@ footer span {
 footer a {
   padding: 0;
 }
-
+/* @media screen and (max-width: 860px): This media query targets screens with a maximum width of 860px,
+ which usually includes tablets and smaller desktop screens.
+  It allows you to apply specific styles for these devices to improve responsiveness and usability. */
 @media screen and (max-width: 860px) {
   .navbar .all-links {
     position: fixed;
@@ -314,6 +358,8 @@ footer a {
     height: 100vh;
     top: 75px;
     background: #333;
+    /* transition: left 0.3s ease;: Adds a smooth transition effect when the left property changes,
+     which makes the menu slide in and out of view over 0.3 seconds. */
     transition: left 0.3s ease;
   }
 
@@ -354,6 +400,8 @@ footer a {
   }
 
   .contact .row {
+    /* flex-direction: column;: Changes the direction of the flex container's main axis to vertical.
+     This means the child elements of .row will be stacked vertically (one on top of the other) rather than horizontally. */
     flex-direction: column;
   }
 

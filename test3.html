@@ -6,6 +6,7 @@
     <title>Document</title>
     <!-- internal css -->
     <style>
+        /* this repesents the universal selector in which it resets margins, padding, and sets the box-sizing to border-box for all elements. */
            * {
                 margin: 0;
                 padding: 0;
@@ -21,14 +22,20 @@
             nav {
                 background-color: rgba(0, 0, 0, 1);
                 text-align: center;
-                padding-block: 18px; position: sticky;
+                padding-block: 18px; 
+                /* Positioning: position: sticky; top: 0; makes the navigation bar sticky at the top of the page,
+                 meaning it will remain visible at the top when scrolling. */
+                position: sticky;
                 top: 0;
                 color: white;
             }
 
             nav > h4 {
+                /* Display: display: inline-block; makes each h4 element behave like an inline element but allows
+                 it to have padding, margins, and dimensions like a block element. */
                 display: inline-block;
-                margin-inline: 15px; }
+                margin-inline: 15px; 
+            }
 
             nav > input {
                 width: 20%;
@@ -37,6 +44,7 @@
             }
 
             nav > input:focus {
+                /* outline: none; removes the default focus outline (often a blue or dotted border) that appears around input elements when they are clicked or focused. */
                 outline: none;
             }
 
@@ -91,7 +99,9 @@
             .container {
                 width: 100%;
                 height: 100vh;
+                /* establishes the container as a positioned element, allowing absolutely positioned child elements to be positioned relative to it. */
                 position: relative;
+                /* overflow: hidden; hides any content that extends outside the bounds of the container, preventing scroll bars and keeping the layout clean. */
                 overflow: hidden;
             }
 
@@ -121,6 +131,7 @@
             }
 
             .shoe-1 {
+                /* position: absolute; positions the element absolutely within its nearest positioned ancestor (e.g., a parent with position: relative;). */
                 position: absolute;
                 right: 10%;
                 top: 20%;
@@ -142,10 +153,12 @@
 </head>
 <body>
 
+    <!-- creates a div element with the class div1, containing a heading (h4) with the text "Free Shipping for all orders now." -->
     <div class="div1">
         <h4>Free Shipping for all orders now</h4>
     </div>
 
+    <!--this creates a navigation bar containing multiple headings, a search input field, and a search icon represented by a span with a magnifying glass emoji -->
     <nav>
         <h4>Men</h4>
         <h4>Women</h4>
@@ -158,6 +171,7 @@
     </nav>
 
     <main>
+        <!-- creates a section with the class sale, containing a header with a prominent heading (h1) and a descriptive paragraph (p).  -->
         <section class="sale">
             <header>
                 <h1>SHOES, CLOTHING & ACCESSORIES SALE: UP TO 60% OFF</h1>
@@ -172,9 +186,12 @@
 
 
     <section class="category-1">
+
         <div class="c1_sub">
+            <!--  title (<h1>) labeled "Trending" is used. -->
             <h1>Trending</h1>
             <div class="tr">
+                <!-- An image (<img> tag) with lazy loading enabled, a base64 encoded source, and specified dimensions. -->
                 <img loading="lazy" width="100%" height="80%" src="data:image/jpeg;base64,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" alt="shoe-1"/>
                 <p style="font-size: 14px;">Air Jordan 7</p>
             </div>
@@ -189,8 +206,11 @@
         </div>
     </section>
 
+
+    <!-- this section includes information related to images and description and comapnys information -->
     <section class="category-2">
         <div class="container">
+            <!-- creates a smooth transition between two or more colors along a straight line. -->
             <div class="shoe" style="background: linear-gradient(to right, #000000, #e74c3c)">
                 <div class="des">
                     <h1>How did Air Jordan start?</h1>
