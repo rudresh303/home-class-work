@@ -11,23 +11,24 @@ This project is a replica of an amazon website UI. It includes a responsive navi
 ![Navbar Screenshot](./geekster/navbar.png)
 
 - **HTML Tags**:
-    - <nav>: Defines the navigation bar container.
   
-  -<div>: Used as containers for various sections like logo, address, search, etc.
+      nav: Defines the navigation bar container.
   
-  -<a>: Creates links for the logo, deliver address, location, sign-in, returns, orders, and cart.
+      div: Used as containers for various sections like logo, address, search, etc.
   
-  -<img>: Displays the logo image.
+      a: Creates links for the logo, deliver address, location, sign-in, returns, orders, and cart.
   
-  -<span>: Used to include icons (like location and cart icons) and other inline elements.
+      img: Displays the logo image.
   
-  -<select>: Dropdown menu for search categories.
+      span: Used to include icons (like location and cart icons) and other inline elements.
   
-  -<option>: Defines the different options within the select dropdown.
+     select: Dropdown menu for search categories.
   
-  -<input>: Input field for the search bar.
+     option: Defines the different options within the select dropdown.
   
-  -<p>: Paragraph tags used for text like "Hello, sign in", "Returns", and "Cart".
+     input: Input field for the search bar.
+  
+     p: Paragraph tags used for text like "Hello, sign in", "Returns", and "Cart".
 
 - **CSS Properties**:
   -height: Defines the height of the navbar.
