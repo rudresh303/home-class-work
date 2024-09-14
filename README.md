@@ -11,14 +11,22 @@ This project is a replica of an amazon website UI. It includes a responsive navi
 ![Navbar Screenshot](./geekster/navbar.png)
 
 - **HTML Tags**:
-  - <nav>: Defines the navigation bar container.
+    - <nav>: Defines the navigation bar container.
+  
   -<div>: Used as containers for various sections like logo, address, search, etc.
+  
   -<a>: Creates links for the logo, deliver address, location, sign-in, returns, orders, and cart.
+  
   -<img>: Displays the logo image.
+  
   -<span>: Used to include icons (like location and cart icons) and other inline elements.
+  
   -<select>: Dropdown menu for search categories.
+  
   -<option>: Defines the different options within the select dropdown.
+  
   -<input>: Input field for the search bar.
+  
   -<p>: Paragraph tags used for text like "Hello, sign in", "Returns", and "Cart".
 
 - **CSS Properties**:
@@ -48,14 +56,14 @@ This project is a replica of an amazon website UI. It includes a responsive navi
 
 ![Banner Screenshot](./geekster/banner.png)
 
-- **HTML Tags**:
+  -**HTML Tags**:
    -<div>: Used as containers for various sections like logo, address, search, etc.
    -<span>: Used to include icons (like location and cart icons) and other inline elements.
    -<a>:Creates links for the "All" button, "Today's Deals," "Customer Service," "Registry," "Gift Cards," "Sell," and "Shop deals in Electronics."
    -<ul>:Defines an unordered list to hold the navigation links.
    -<li>:List items that contain each navigation link inside the unordered list.
   
-- **CSS Properties**:
+  -**CSS Properties**:
    -padding: Adds space inside the element, between its content and its border.
    -background: Sets the background color or image of the element.
    -color: Specifies the text color of the element.
