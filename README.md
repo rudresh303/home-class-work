@@ -2,7 +2,7 @@
 
 This project is a replica of an amazon website UI. It includes a responsive navigation bar, banner section, product listing, and footer.
 
-[Check out our live site](http://example.com)
+[Check out our live site](https://rudresh303.github.io/home-class-work/geekster/test5#)
 
 ## Project Screenshots and Explanations
 
