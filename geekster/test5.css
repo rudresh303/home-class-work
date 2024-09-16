@@ -151,6 +151,7 @@ header {
   align-items: center;
   list-style: none;
   gap: 15px;
+  /* flex-grow: 1; is used in flexbox layouts to control how much a flex item should grow relative to other flex items inside a container. */
   flex-grow: 1;
   margin-left: 15px;
 }
@@ -183,7 +184,11 @@ header {
 }
 
 .shop-images {
+  /* display: grid; This allows you to create a grid-based layout for the child elements of the container, 
+  giving you fine control over the positioning and sizing of these elements. */
   display: grid;
+  /* repeat(): This function repeats a pattern or a set number of columns.
+auto-fit: This keyword means that the grid will automatically fit as many columns as possible into the available space. */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   max-width: 1280px;
@@ -198,11 +203,15 @@ header {
   cursor: pointer;
   flex-direction: column;
   white-space: nowrap;
+  /* scale(1) means the element is displayed at its normal size (100% of its original dimensions). 
+  The number 1 represents a scaling factor, where 1 means no change. */
   transform: scale(1);
+  /* The transition property defines the duration and timing function for animating changes to a property  */
   transition: transform 0.7s ease-in-out;
 }
 
 .shop-link:hover{
+  /* transform: scale(1.1); is used to enlarge an element by 10% of its original size. */
   transform: scale(1.1);
 }
 
@@ -224,6 +233,9 @@ header {
   font-size: 0.9rem;
   color: blue;
   font-weight: 500;
+  /* color : This specifies that the transition effect should be applied to changes in the color property. */
+  /* 0.3s : This defines the duration of the transition. Here, 0.3s (300 milliseconds) means the transition will take 0.3 seconds to complete. */
+  /* The ease function makes the transition start slowly, speed up in the middle, and then slow down again towards the end. */
   transition: color 0.3s ease;
 }
 
