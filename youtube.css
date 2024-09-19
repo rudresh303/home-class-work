@@ -15,6 +15,8 @@ body{
 }
 
 .header{
+    /* display: flex;: Makes .header_left a flex container, allowing its children to be flex items.
+   align-items: center;: Centers child elements vertically within the .header_left container. */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,6 +75,7 @@ body{
     height: 100%;
     width: 230px;
     background-color: white;
+    /* Adds a vertical scrollbar if the content inside the sidebar exceeds its height. */
     overflow-y: scroll;
 }
 
@@ -122,6 +125,7 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /* Allows child elements to wrap onto multiple lines if they overflow the container. */
     flex-wrap: wrap;
 }
 
@@ -136,6 +140,7 @@ hr{
 }
 
 .video_thumbnail img{
+    /* object-fit: cover;: Ensures that the image covers the entire area of its container, cropping as needed to fill the space. */
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -151,12 +156,14 @@ hr{
 
 .video_details{
     display: flex;
+    /* flex-direction: row;: Arranges child elements in a horizontal row */
     flex-direction: row;
     margin-top: 5px;
 }
 
 .title{
     display: flex;
+    /* flex-direction: row;: Arranges child elements in a vertica column */
     flex-direction: column;
 }
 
