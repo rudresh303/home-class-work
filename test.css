@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+
+   background-color: rgb(20, 34, 34);
+   color: aliceblue;
+   display: flex;
+   justify-content: space-between;
+   
+}
+
+.hright{
+    display: flex;
+    list-style-type: none;
+    margin: 30px;
+}
+
+li{
+    margin-right: 20px;
+}
+
+
+.hleft{
+
+    margin: 30px;
+}
+
+
+.mainpart{
+
+    background-image: url("https://elements-resized.envatousercontent.com/envato-shoebox/63ce/3e87-0a3f-49c5-a7de-392db5c9631f/a8945.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=6164fc9c6fc7b31587d7234a7eb8dd7abc415b704075c7e5ecce876d8233ce4e");
+    height: 100vh;
+    width: 100vw;
+}
+
+.mainleft{
+
+    width: 50%;
+    background-color: black; 
+    height: 100%;
+    opacity: 0.6;
+    
+}
+
+.content{
+
+    color: aliceblue;
+    padding: 20px;
+    padding-left: 60px;
+
+}
+
+h1{
+    font-size:5em;
+}
+
+p{
+
+    font-size: 2em;
+    color: white;
+    padding-left:60px;
+}
+
+h2{
+
+    color: white;
+    padding-left: 60px;
+    margin-top: 20px;
+}
+
+
+.para{
+    font-size: 12px;
+    margin-top: 20px;
+    color:red;
+}
+
+.divform{
+
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+}
+
+h6{
+    color: white;
+    margin-top: 20px;
+    font-size: medium;
+}
